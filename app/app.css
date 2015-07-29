@@ -28,3 +28,13 @@
   content: "";
   padding: 0;
 }
+
+.builder {
+    background-color: transparent;
+    z-index: 2;
+    position: absolute;
+}
+
+.chart {
+    background-color: transparent;
+}

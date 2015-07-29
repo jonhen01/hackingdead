@@ -40,18 +40,21 @@ angular.module('myApp.view1', ['ngRoute', 'highcharts-ng'])
             yAxis: {
                 labels: {
                     style: {
-                        color: 'white'
+                        color: 'red',
+                        fontWeight: 'bold'
+
                     }
                 },
-                gridLineColor: 'white'
+                gridLineColor: 'red'
             },
             xAxis: {
                 labels: {
                     style: {
-                        color: 'white'
+                        color: 'red',
+                        fontWeight: 'bold'
                     }
                 },
-                gridLineColor: 'white'
+                gridLineColor: 'red'
             },
             loading: false
         }
