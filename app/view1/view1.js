@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('myApp.view1', ['ngRoute', 'highcharts-ng'])
+angular.module('myApp.view1', ['ngRoute', 'highcharts-ng', 'dataService'])
 
 .config(['$routeProvider', function($routeProvider) {
   $routeProvider.when('/view1', {
@@ -9,7 +9,7 @@ angular.module('myApp.view1', ['ngRoute', 'highcharts-ng'])
   });
 }])
 
-.controller('View1Ctrl', ['$scope', function($scope) {
+.controller('View1Ctrl', ['$scope', 'dataService', function($scope, dataService) {
 
         //console.log("stop here");
         $scope.chartConfig = {
@@ -57,6 +57,13 @@ angular.module('myApp.view1', ['ngRoute', 'highcharts-ng'])
                 gridLineColor: 'red'
             },
             loading: false
-        }
+        };
+
+        $scope.bla;
+        dataService.getData().then(function(data) {
+            $scope.bla = data;
+            console.log($scope.bla);
+        });
+
 
     }]);
