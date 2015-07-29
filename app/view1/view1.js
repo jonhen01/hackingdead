@@ -19,14 +19,20 @@ angular.module('myApp.view1', ['ngRoute', 'highcharts-ng'])
                     backgroundColor:'rgba(255, 255, 255, 0)'
                 }
             },
-            colors: ['#7cb5ec', '#434348', '#90ed7d', '#f7a35c', '#8085e9',
-                '#f15c80', '#e4d354', '#2b908f', '#f45b5b', '#91e8e1'],
             series: [{
+                color: 'black',
+                borderColor: 'red',
                 data: [{y:10, name:'Fred'},
                     {y: 15, name: 'Buster'},
                     {y: 12, name: 'Jesse'},
                     {y: 8, name: 'Jon'},
-                    {y: 7, name: 'Melanie'}]
+                    {y: 7, name: 'Melanie'}],
+                dataLabels: {
+                    inside: true,
+                    color: 'red',
+                    enabled: true
+
+                }
             }],
             title: {
                 text: ''
